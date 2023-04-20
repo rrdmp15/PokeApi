@@ -1,4 +1,18 @@
-/* *{
+@font-face {
+    font-family: phases on stun;
+    src: url(./fonts/ccphasesOnStunMedium.ttf);
+}
+@font-face {
+    font-family: pressure drop 2D;
+    src: url(./fonts/PressureDrop2DW05Regular.ttf);
+}
+
+@font-face {
+    font-family: world three;
+    src: url(./fonts/WorldThreeOTW03Regular.ttf);
+}
+
+*{
     margin: 0;
     padding: 0;
 }
@@ -6,6 +20,18 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'pressure drop 2D';
+    background-color: #6179A6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23657ba6'/%3E%3Cstop offset='1' stop-color='%23657ba6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23697fa6'/%3E%3Cstop offset='1' stop-color='%23697fa6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236d81a6'/%3E%3Cstop offset='1' stop-color='%236d81a6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236179A6'/%3E%3Cstop offset='1' stop-color='%236179A6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23697DA6'/%3E%3Cstop offset='1' stop-color='%23697DA6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%237186A6'/%3E%3Cstop offset='1' stop-color='%237186A6' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 10px;
+}
+
+h1, h2{
+    font-family: 'phases on stun';
+    font-size: 10em;
+    color: #fff;
 }
 .imgTitulo{
     width: 100%;
@@ -15,84 +41,140 @@ body{
 }
 img{
     width: 30% !important;
-
-} */
-
-:root{
-    --boxColor: #0ff7;
 }
 
-body{
-    background-color: #000;
-    min-height: 100vh;
+.imgPokedex{
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 75px;
-    perspective: 10em;
-    perspective-origin: 50% -2em;
-}
-.scene{
-    position: relative;
-    transform-style: preserve-3d;
+    justify-content: space-around;
 }
 
-.ball{
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    background: lightblue;
-    position: absolute;
-    left: -.5em;
-    bottom: 1em;
+.pokedex{
+    background-color: #fff;
+    height: 800px;
+    width: 500px;
 }
 
-.cube{
-    width: 2em;
-    height: 2em;
-
-    position: absolute;
-    top: -1em;
-    left: -1em;
-
-    
+.up{
+    height: 50%;
 }
-    .lef, .right, .front, .back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: var(--boxColor);
-    }
-    
-    .front{transform: translateZ(1em);}
 
-    .right{transform: rotateY(90deg) translateZ(1em);}
+.pokeTitle{
+    border-bottom: #515151 solid 2px;
+    display: flex;
+    height: 15%;
+}
 
-    .back{transform: rotateY(90deg) translateZ(1em);}
+.titleContainer{
+    background: #5169EF;
+    padding: 10px;
+    border-bottom:#9AA6D3 solid 2px;
+    border-right: #3041BE solid 2px;
+    width: 70%;
+}
 
-    .lef{transform: rotateY(270deg) translateZ(1em);}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 75%;
+    background: #51C7FF;
+    border-radius: 20px;
+    border: #515151 solid 2px;
+}
 
-    .top {
-        position: absolute;
-        width: 2em;
-        height: 2em;
-        background: var(--boxColor);
-        transform: translateY(-50%) rotateX(90deg);
-    }
-    
+.title p{
+    font-family: 'phases on stun';
+    font-size: 25px;
+    margin: 0 10px;
+}
 
+.title img{
+    width: 40px !important;
+}
 
+.space{
+    background: #7996E7;
+    width: 30%;
+    border-bottom:#9AA6D3 solid 2px;
+    border-left:#9AA6D3 solid 2px;
+}
 
+.pokeList{
+    background-color: #6179A6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23657ba6'/%3E%3Cstop offset='1' stop-color='%23657ba6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23697fa6'/%3E%3Cstop offset='1' stop-color='%23697fa6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236d81a6'/%3E%3Cstop offset='1' stop-color='%236d81a6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236179A6'/%3E%3Cstop offset='1' stop-color='%236179A6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23697DA6'/%3E%3Cstop offset='1' stop-color='%23697DA6' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%237186A6'/%3E%3Cstop offset='1' stop-color='%237186A6' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    height: 55%;
+}
 
-.floor{
-    position: absolute;
-    top: 1em;
-    transform: 
-    translate(-50%, -50%)
-    rotateX(90deg);
+.left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.border3{
+    width: 80%;
+    border: #495986 solid 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+}
 
-    width: 15em;
-    height: 15em;
-    background-image: repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
-    background-size: 1em 1em;
+.border2{
+    border: #FFF786 solid 5px;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgList{
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 100 100'%3E%3Cg stroke='%23CCC' stroke-width='0' %3E%3Crect fill='%23F7F7FF' x='-60' y='-60' width='99' height='240'/%3E%3C/g%3E%3C/svg%3E");
+    border: #95AEDB solid 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.imgList img{
+    width: 80% !important;
+}
+
+.right{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: world three;
+    font-size: 1.3em;
+    color: #73736E;
+}
+
+.right li{
+    width: 210px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background: #FFFFC7;
+    padding: 5px 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.right img{
+    width: 25px !important;
+    margin-right: 4px;
 }
