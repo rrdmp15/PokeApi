@@ -87,7 +87,7 @@ img{
     height: 800px;
     width: 500px;
     border: #9AA6D3 solid 1px;
-    display: none;
+    /* display: none; */
 }
 
 .up{
@@ -106,6 +106,15 @@ img{
     border-bottom:#9AA6D3 solid 2px;
     border-right: #3041BE solid 2px;
     width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.titleContainer p{
+    font-family: 'phases on stun';
+    font-size: 25px;
+    margin: 0 10px;
+    color: #fff;
 }
 
 .title{
