@@ -1,3 +1,9 @@
+import style from "../components/style.js"
+
+style.showPokedex();
+
+
+
 const pokemonContainer = document.querySelector(".pokemonContainer")
 let pokemon = [];
 const fetchPokemon = async()=>{
