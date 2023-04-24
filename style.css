@@ -87,7 +87,7 @@ img{
     height: 800px;
     width: 500px;
     border: #9AA6D3 solid 1px;
-    /* display: none; */
+    display: none;
     margin-bottom: 30px;
 }
 
@@ -218,6 +218,7 @@ img{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     margin: 3px 0;
+    
 }
 
 .right img{
@@ -377,7 +378,7 @@ img{
     height: 800px;
     width: 500px;
     border: #9AA6D3 solid 1px;
-    /* display: none; */
+    display: none;
     margin-bottom: 30px;
 }
 
@@ -409,6 +410,11 @@ img{
     width: 10%;
     border-bottom:#9AA6D3 solid 2px;
     border-left:#9AA6D3 solid 2px;
+    font-size: 1.5em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content{
@@ -512,6 +518,7 @@ img{
     width: 500px;
     border: #9AA6D3 solid 1px;
     margin-bottom: 30px;
+    display: none;
 }
 
 .upBuscar{
@@ -638,4 +645,17 @@ img{
 
 .listaResultados{
     height: 100%;
+}
+
+.resultadosPokedex{
+    background-color: #fff;
+    height: 800px;
+    width: 500px;
+    border: #9AA6D3 solid 1px;
+    display: none;
+    margin-bottom: 30px;
+}
+
+.hidden{
+    display: none;
 }
