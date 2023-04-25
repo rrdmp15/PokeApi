@@ -1,9 +1,10 @@
 export default{
+    
     show(){
         const lista = document.querySelector(".lista");
         const paginacionContainer = document.querySelector(".paginacionContainer");
         let urlPokemon = "https://pokeapi.co/api/v2/pokemon";
-        let ws = new Worker("../storage/wsPaginacion.js");
+        let ws = new Worker('./storage/wsPaginacion.js');
         
         let listImg = document.querySelector(".imgList");
         let insertDetalle = document.querySelector("#insertDetalle");
